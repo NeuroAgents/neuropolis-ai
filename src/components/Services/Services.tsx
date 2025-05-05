@@ -121,7 +121,7 @@ const Services = () => {
                 fill="currentColor"
               />
             </svg>
-            Neuropolis.ai
+            Услуги
           </div>
           <h2 className="text-[48px] font-bold text-gray-800 dark:text-white mb-4">
             Как{" "}

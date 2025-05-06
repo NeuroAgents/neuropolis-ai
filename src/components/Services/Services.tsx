@@ -10,6 +10,9 @@ import "../../style/hero.css";
 import "../../style/services.css";
 import Container from "../ui/Container";
 import Workflow from "./Workflow";
+import AIAgent from "./AIAgent";
+import Chatbots from "./Chatbots";
+import StrategicConsulting from "./StrategicConsulting";
 
 const Services = () => {
   const { isDark } = useTheme();
@@ -526,6 +529,14 @@ const Services = () => {
               </div>
             </div>
           </div>
+        </div>
+
+        {/* Карточки услуг */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+          <AIAgent />
+          <Workflow />
+          <Chatbots />
+          <StrategicConsulting />
         </div>
       </Container>
     </section>

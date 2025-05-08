@@ -266,8 +266,8 @@ export default function ContactForm({
   // Стили для контейнеров иконок
   const iconContainerStyle = `w-12 h-12 rounded-full flex items-center justify-center transition-colors duration-300 shadow-sm ${
     isDark
-      ? "bg-gradient-to-br from-blue-600/30 to-sky-600/30 text-blue-400 shadow-blue-900/10"
-      : "bg-gradient-to-br from-blue-100 to-sky-100 text-blue-500 shadow-blue-200/50"
+      ? "bg-gradient-to-br from-gray-700/60 to-gray-800/60 text-gray-300 shadow-gray-900/10"
+      : "bg-gradient-to-br from-gray-100 to-gray-200/70 text-gray-700 shadow-gray-200/50"
   }`;
 
   // Стили для полей ввода
@@ -279,7 +279,7 @@ export default function ContactForm({
 
   const bgStyle = backgroundColor
     ? { backgroundColor }
-    : `bg-gradient-to-b from-blue-50/80 to-white dark:from-blue-950/10 dark:to-gray-950`;
+    : `bg-gradient-to-b from-gray-50/80 to-white dark:from-gray-900/90 dark:to-gray-950`;
 
   const content = (
     <section
@@ -312,21 +312,21 @@ export default function ContactForm({
       </div>
 
       {/* Декоративные элементы */}
-      <div className="absolute -top-24 -right-24 w-[120vw] h-[120vw] max-w-[800px] max-h-[800px] bg-gradient-to-br from-blue-200/40 to-blue-400/40 dark:from-blue-500/15 dark:to-blue-700/15 rounded-full blur-3xl -z-10"></div>
-      <div className="absolute -bottom-24 -left-24 w-[120vw] h-[120vw] max-w-[800px] max-h-[800px] bg-gradient-to-tr from-sky-200/40 to-sky-400/40 dark:from-sky-500/15 dark:to-sky-700/15 rounded-full blur-3xl -z-10"></div>
+      <div className="absolute -top-24 -right-24 w-[120vw] h-[120vw] max-w-[800px] max-h-[800px] bg-gradient-to-br from-gray-200/40 to-gray-300/40 dark:from-gray-700/15 dark:to-gray-800/15 rounded-full blur-3xl -z-10"></div>
+      <div className="absolute -bottom-24 -left-24 w-[120vw] h-[120vw] max-w-[800px] max-h-[800px] bg-gradient-to-tr from-gray-200/40 to-gray-300/40 dark:from-gray-700/15 dark:to-gray-800/15 rounded-full blur-3xl -z-10"></div>
 
       {/* Анимированные элементы */}
       <motion.div
         variants={floatingVariants}
         initial="initial"
         animate="animate"
-        className="absolute top-[15%] right-[10%] w-14 h-14 bg-blue-400/20 dark:bg-blue-600/30 rounded-full backdrop-blur-md -z-5"
+        className="absolute top-[15%] right-[10%] w-14 h-14 bg-gray-300/20 dark:bg-gray-700/30 rounded-full backdrop-blur-md -z-5"
       ></motion.div>
       <motion.div
         variants={floatingVariants}
         initial="initial"
         animate="animate"
-        className="absolute bottom-[15%] left-[7%] w-18 h-18 bg-sky-400/20 dark:bg-sky-600/30 rounded-full backdrop-blur-md -z-5"
+        className="absolute bottom-[15%] left-[7%] w-18 h-18 bg-gray-300/20 dark:bg-gray-700/30 rounded-full backdrop-blur-md -z-5"
         style={{ animationDelay: "1.5s" }}
       ></motion.div>
 

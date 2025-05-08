@@ -261,21 +261,21 @@ export default function ContactForm({
   };
 
   // Стили для иконок
-  const iconStyle = `w-6 h-6 ${isDark ? "text-gray-400" : "text-gray-500"}`;
+  const iconStyle = `w-6 h-6 ${isDark ? "text-purple-400" : "text-purple-500"}`;
 
   // Стили для контейнеров иконок
   const iconContainerStyle = `w-12 h-12 rounded-2xl flex items-center justify-center transition-colors duration-300 shadow-sm ${
     isDark
-      ? "bg-gradient-to-br from-gray-600/30 to-gray-600/30 text-gray-400 shadow-gray-900/10"
-      : "bg-gradient-to-br from-gray-100 to-gray-100 text-gray-500 shadow-gray-200/50"
+      ? "bg-gradient-to-br from-purple-600/30 to-purple-700/30 text-purple-300 shadow-purple-900/10"
+      : "bg-gradient-to-br from-purple-100 to-purple-200/70 text-purple-600 shadow-purple-200/50"
   }`;
 
   // Стили для полей ввода
   const inputStyle = `w-full px-4 py-3 rounded-xl border transition-all duration-200 ${
     isDark
-      ? "bg-gray-700/80 border-gray-600 text-white focus:border-gray-500 focus:bg-gray-700 placeholder-gray-400"
-      : "bg-white/80 border-gray-300 text-gray-900 focus:border-gray-400 focus:bg-white placeholder-gray-400"
-  } focus:ring-3 focus:ring-gray-500/40 focus:outline-none`;
+      ? "bg-gray-700/80 border-gray-600 text-white focus:border-purple-500 focus:bg-gray-700 placeholder-gray-400"
+      : "bg-white/80 border-gray-300 text-gray-900 focus:border-purple-400 focus:bg-white placeholder-gray-400"
+  } focus:ring-3 focus:ring-purple-500/40 focus:outline-none`;
 
   const bgStyle = backgroundColor
     ? { backgroundColor }
@@ -312,21 +312,21 @@ export default function ContactForm({
       </div>
 
       {/* Декоративные элементы */}
-      <div className="absolute -top-24 -right-24 w-[120vw] h-[120vw] max-w-[800px] max-h-[800px] bg-gradient-to-br from-gray-200/40 to-gray-400/40 dark:from-gray-500/15 dark:to-gray-700/15 rounded-full blur-3xl -z-10"></div>
-      <div className="absolute -bottom-24 -left-24 w-[120vw] h-[120vw] max-w-[800px] max-h-[800px] bg-gradient-to-tr from-gray-200/40 to-gray-400/40 dark:from-gray-500/15 dark:to-gray-700/15 rounded-full blur-3xl -z-10"></div>
+      <div className="absolute -top-24 -right-24 w-[120vw] h-[120vw] max-w-[800px] max-h-[800px] bg-gradient-to-br from-purple-200/40 to-pink-300/40 dark:from-purple-700/15 dark:to-pink-800/15 rounded-full blur-3xl -z-10"></div>
+      <div className="absolute -bottom-24 -left-24 w-[120vw] h-[120vw] max-w-[800px] max-h-[800px] bg-gradient-to-tr from-pink-200/40 to-purple-300/40 dark:from-pink-700/15 dark:to-purple-800/15 rounded-full blur-3xl -z-10"></div>
 
       {/* Анимированные элементы */}
       <motion.div
         variants={floatingVariants}
         initial="initial"
         animate="animate"
-        className="absolute top-[15%] right-[10%] w-14 h-14 bg-gray-400/20 dark:bg-gray-600/30 rounded-full backdrop-blur-md -z-5"
+        className="absolute top-[15%] right-[10%] w-14 h-14 bg-purple-400/20 dark:bg-purple-600/30 rounded-full backdrop-blur-md -z-5"
       ></motion.div>
       <motion.div
         variants={floatingVariants}
         initial="initial"
         animate="animate"
-        className="absolute bottom-[15%] left-[7%] w-18 h-18 bg-gray-400/20 dark:bg-gray-600/30 rounded-full backdrop-blur-md -z-5"
+        className="absolute bottom-[15%] left-[7%] w-18 h-18 bg-pink-400/20 dark:bg-pink-600/30 rounded-full backdrop-blur-md -z-5"
         style={{ animationDelay: "1.5s" }}
       ></motion.div>
 
@@ -346,7 +346,7 @@ export default function ContactForm({
                   <div className="mb-10">
                     <motion.div
                       variants={itemVariants}
-                      className="inline-flex items-center justify-center border border-gray-300 dark:border-gray-800 gap-2 px-4 py-1 rounded-full text-sm mb-4 bg-gray-500/10 text-gray-600 dark:text-gray-400"
+                      className="inline-flex items-center justify-center border border-purple-300 dark:border-purple-800 gap-2 px-4 py-1 rounded-full text-sm mb-4 bg-purple-500/10 text-purple-600 dark:text-purple-400"
                     >
                       Связаться с нами
                     </motion.div>
@@ -358,7 +358,7 @@ export default function ContactForm({
                         {title.includes("автоматизировать") ? (
                           <>
                             Готовы{" "}
-                            <span className="bg-clip-text text-transparent bg-gradient-to-r from-gray-500 to-gray-400">
+                            <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-400">
                               автоматизировать
                             </span>{" "}
                             ваш бизнес?
@@ -409,10 +409,10 @@ export default function ContactForm({
                 {showConfidentiality && (
                   <motion.div
                     variants={itemVariants}
-                    className="mt-10 p-6 rounded-xl border border-gray-200 dark:border-gray-700/30 bg-gradient-to-br from-gray-50/50 to-white dark:from-gray-800/20 dark:to-gray-800/10 backdrop-blur-sm shadow-sm"
+                    className="mt-10 p-6 rounded-xl border border-purple-100 dark:border-purple-800/30 bg-gradient-to-br from-purple-50/50 to-white dark:from-purple-900/20 dark:to-purple-800/10 backdrop-blur-sm shadow-sm"
                   >
                     <div className="flex items-center gap-3 mb-3">
-                      <RiShieldLine className="w-5 h-5 text-gray-500 dark:text-gray-400" />
+                      <RiShieldLine className="w-5 h-5 text-purple-500 dark:text-purple-400" />
                       <span className="text-[16px] font-medium text-gray-900 dark:text-white">
                         Гарантия конфиденциальности
                       </span>
@@ -432,13 +432,13 @@ export default function ContactForm({
                 y: -5,
                 transition: { duration: 0.3 },
                 boxShadow: isDark
-                  ? "0 20px 40px rgba(30, 30, 30, 0.25)"
-                  : "0 20px 40px rgba(200, 200, 200, 0.25)",
+                  ? "0 20px 40px rgba(88, 28, 135, 0.25)"
+                  : "0 20px 40px rgba(168, 85, 247, 0.15)",
               }}
               className={`p-8 rounded-2xl backdrop-blur-sm ${
                 isDark
                   ? "bg-gray-800/50 border border-gray-700"
-                  : "bg-white/90 border border-gray-200 shadow-xl shadow-gray-200/50"
+                  : "bg-white/90 border border-gray-200 shadow-xl shadow-purple-100/50"
               }`}
             >
               {isSubmitted ? (
@@ -447,7 +447,7 @@ export default function ContactForm({
                   animate={{ opacity: 1, scale: 1 }}
                   className="text-center py-10"
                 >
-                  <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-r from-gray-600 to-gray-500 text-white mb-6 shadow-lg shadow-gray-400/30">
+                  <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-r from-purple-500 to-pink-400 text-white mb-6 shadow-lg shadow-purple-500/30">
                     <RiCheckboxCircleLine className="w-10 h-10" />
                   </div>
                   <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
@@ -460,8 +460,8 @@ export default function ContactForm({
               ) : (
                 <>
                   <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
-                    <span className="inline-block p-1.5 rounded-full bg-gray-200 dark:bg-gray-700">
-                      <RiMessage2Line className="w-5 h-5 text-gray-700 dark:text-gray-300" />
+                    <span className="inline-block p-1.5 rounded-full bg-purple-500/20 dark:bg-purple-400/20">
+                      <RiMessage2Line className="w-5 h-5 text-purple-500 dark:text-purple-400" />
                     </span>
                     Заполните форму
                   </h3>
@@ -475,7 +475,7 @@ export default function ContactForm({
                         htmlFor={`${formId}-name`}
                         className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5 flex items-center gap-1.5"
                       >
-                        <RiUser3Line className="w-4 h-4 text-gray-500 dark:text-gray-400" />
+                        <RiUser3Line className="w-4 h-4 text-purple-500 dark:text-purple-400" />
                         {formLabels.name}{" "}
                         <span className="text-red-500">*</span>
                       </label>
@@ -496,7 +496,7 @@ export default function ContactForm({
                         htmlFor={`${formId}-email`}
                         className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5 flex items-center gap-1.5"
                       >
-                        <RiMailLine className="w-4 h-4 text-gray-500 dark:text-gray-400" />
+                        <RiMailLine className="w-4 h-4 text-purple-500 dark:text-purple-400" />
                         {formLabels.email}{" "}
                         <span className="text-red-500">*</span>
                       </label>
@@ -525,7 +525,7 @@ export default function ContactForm({
                             htmlFor={`${formId}-phone`}
                             className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5 flex items-center gap-1.5"
                           >
-                            <RiPhoneLine className="w-4 h-4 text-gray-500 dark:text-gray-400" />
+                            <RiPhoneLine className="w-4 h-4 text-purple-500 dark:text-purple-400" />
                             {formLabels.phone}
                           </label>
                           <input
@@ -546,7 +546,7 @@ export default function ContactForm({
                             htmlFor={`${formId}-company`}
                             className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5 flex items-center gap-1.5"
                           >
-                            <RiBuildingLine className="w-4 h-4 text-gray-500 dark:text-gray-400" />
+                            <RiBuildingLine className="w-4 h-4 text-purple-500 dark:text-purple-400" />
                             {formLabels.company}
                           </label>
                           <input
@@ -567,7 +567,7 @@ export default function ContactForm({
                         htmlFor={`${formId}-message`}
                         className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5 flex items-center gap-1.5"
                       >
-                        <RiMessage2Line className="w-4 h-4 text-gray-500 dark:text-gray-400" />
+                        <RiMessage2Line className="w-4 h-4 text-purple-500 dark:text-purple-400" />
                         {formLabels.message}
                       </label>
                       <textarea
@@ -590,7 +590,7 @@ export default function ContactForm({
                           checked={formState.agreement}
                           onChange={handleCheckboxChange}
                           required
-                          className="h-5 w-5 rounded text-gray-600 focus:ring-gray-500 border-gray-300 focus:ring-2 focus:ring-offset-1 transition-colors"
+                          className="h-5 w-5 rounded text-purple-600 focus:ring-purple-500 border-gray-300 focus:ring-2 focus:ring-offset-1 transition-colors"
                         />
                       </div>
                       <label
@@ -604,7 +604,7 @@ export default function ContactForm({
                             Я согласен с{" "}
                             <a
                               href={privacyPolicyUrl}
-                              className="text-gray-600 dark:text-gray-400 hover:underline"
+                              className="text-purple-600 dark:text-purple-400 hover:underline"
                             >
                               политикой конфиденциальности
                             </a>{" "}
@@ -621,7 +621,7 @@ export default function ContactForm({
                       disabled={isSubmitting}
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
-                      className={`w-full mt-2 bg-gradient-to-r from-gray-600 to-gray-500 text-white font-semibold py-3.5 px-6 rounded-xl transition-all hover:shadow-lg hover:shadow-gray-400/30 dark:hover:shadow-gray-600/30 flex items-center justify-center ${
+                      className={`w-full mt-2 bg-gradient-to-r from-purple-600 to-pink-500 text-white font-semibold py-3.5 px-6 rounded-xl transition-all hover:shadow-lg hover:shadow-purple-500/30 dark:hover:shadow-purple-600/30 flex items-center justify-center ${
                         isSubmitting ? "opacity-70 cursor-not-allowed" : ""
                       }`}
                     >

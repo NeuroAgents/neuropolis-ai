@@ -54,6 +54,7 @@ export default async function Home() {
           useContainer={false}
           fullWidth={true}
           formId="main-contact-form"
+          backgroundColor="rgba(249, 250, 251, 0.8)"
           features={[
             {
               icon: <RiMailLine />,

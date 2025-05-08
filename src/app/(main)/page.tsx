@@ -8,9 +8,11 @@ import Features from "@/components/Features/Features";
 import Process from "@/components/Process/Process";
 import Projects from "@/components/Projects/Projects";
 import Testimonials from "@/components/Testimonials/Testimonials";
-import Contact from "@/components/Contact/Contact";
 import FAQ from "@/components/FAQ/FAQ";
 import { BsArrowRight } from "react-icons/bs";
+import Badge from "@/components/ui/Badge";
+import WorkflowAutomationContactForm from "@/components/workflow-automation/WorkflowAutomationContactForm";
+import { RiMailLine, RiPhoneLine, RiTeamLine } from "react-icons/ri";
 
 // Отключаем кеширование данных для этой страницы
 export const dynamic = "force-dynamic";
@@ -38,10 +40,8 @@ export default async function Home() {
 
           <div className="container mx-auto max-w-[1280px] relative z-10">
             <div className="text-center mb-16">
-              <div className="inline-block px-4 py-1 rounded-full text-sm mb-4 switch-box light-switch-box dark:bg-gray-800/60 dark:text-gray-300">
-                Блог
-              </div>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-gray-900 dark:text-white mb-4">
+              <Badge>Блог</Badge>
+              <h2 className="text-[36px] font-semibold text-gray-900 dark:text-white mb-4">
                 Последние{" "}
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#0167F3] to-[#399AFC]">
                   публикации
@@ -83,7 +83,40 @@ export default async function Home() {
       )}
 
       <FAQ />
-      <Contact />
+
+      {/* Заменяем стандартный компонент Contact на WorkflowAutomationContactForm */}
+      <WorkflowAutomationContactForm
+        title="Готовы обсудить ваш проект?"
+        subtitle="Оставьте заявку, и наши эксперты свяжутся с вами в ближайшее время для консультации и оценки возможностей."
+        showCompanyField={true}
+        showPhoneField={true}
+        showFeatures={true}
+        showConfidentiality={true}
+        useContainer={false}
+        fullWidth={true}
+        formId="main-contact-form"
+        features={[
+          {
+            icon: <RiMailLine />,
+            title: "Быстрый ответ",
+            description:
+              "Мы отвечаем на все запросы в течение 24 часов и готовы предоставить подробную консультацию.",
+          },
+          {
+            icon: <RiPhoneLine />,
+            title: "Индивидуальный подход",
+            description:
+              "Разрабатываем решения с учетом особенностей вашего бизнеса и существующей инфраструктуры.",
+          },
+          {
+            icon: <RiTeamLine />,
+            title: "Команда профессионалов",
+            description:
+              "С вами будут работать опытные специалисты в области искусственного интеллекта и автоматизации.",
+          },
+        ]}
+        backgroundColor={undefined}
+      />
     </main>
   );
 }
